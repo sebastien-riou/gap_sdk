@@ -23,7 +23,7 @@ static void hello(void *arg)
 
 static void free_mem(void* p,int size,rt_free_req_t* req)
 {
-  rt_free_cluster(RT_ALLOC_L2_CL_DATA, p, alloc_size, req);
+  rt_free_cluster(RT_ALLOC_L2_CL_DATA, p, size, req);
   rt_free_cluster_wait(req);
 }
 
